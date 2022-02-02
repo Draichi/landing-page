@@ -1,8 +1,14 @@
-function App() {
+import { GlobalStyles } from "./styles/GlobalStyles";
 
+import Page from "./components/Page";
+
+function App() {
   return (
-    <h1>Tesla clone</h1>
-  )
+    <>
+      <Page />
+      <GlobalStyles />
+    </>
+  );
 }
 
-export default App
+export default App;
