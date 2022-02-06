@@ -15,12 +15,12 @@ function Page({ children }: PageProps) {
         <div>
           {[
             "Model #1",
-            "Model #2",
-            "Model #3",
-            "Model #4",
-            "Model #5",
-            "Model #6",
-            "Model #7",
+            // "Model #2",
+            // "Model #3",
+            // "Model #4",
+            // "Model #5",
+            // "Model #6",
+            // "Model #7",
           ].map((model) => (
             <ModelSection
               key={model}
