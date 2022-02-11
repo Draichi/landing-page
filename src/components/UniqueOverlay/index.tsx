@@ -1,4 +1,6 @@
+import { useTransform } from "framer-motion";
 import { ReactNode } from "react";
+import useWrapperScroll from "../Model/useWrapperScroll";
 
 import { Container, Header, Burger, Logo, Footer } from "./styles";
 
@@ -7,6 +9,9 @@ interface UniqueOverlayProps {
 }
 
 function UniqueOverlay({ children }: UniqueOverlayProps) {
+  const { scrollYProgress } = useWrapperScroll();
+
+  const opacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
   return (
     <Container>
       <Header>
@@ -14,7 +19,7 @@ function UniqueOverlay({ children }: UniqueOverlayProps) {
         <Burger />
       </Header>
 
-      <Footer>
+      <Footer style={{ opacity }}>
         <ul>
           <li>
             <a href="#">#1</a>
