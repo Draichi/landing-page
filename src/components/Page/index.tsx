@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import DefaultOverlayContent from "../DefaultOverlayContent";
 import { ModelSection, ModelsWrapper } from "../Model";
+import UniqueOverlay from "../UniqueOverlay";
 
 import { Container } from "./styles";
 
@@ -35,6 +36,8 @@ function Page({ children }: PageProps) {
             />
           ))}
         </div>
+
+        <UniqueOverlay />
       </ModelsWrapper>
     </Container>
   );
